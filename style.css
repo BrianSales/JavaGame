@@ -1,87 +1,73 @@
 :root{
-    background-color:white;
+    --hue-wright: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
 }
 
-
-
-.btn{
-    border-radius: 4px;
-    font-size: 30px;
-    padding: 25px 0;
-    width: 420px;
-    text-align: center;
-    margin-bottom: 16px;
-    text-decoration: none;
-    color: black;
-    background: linear-gradient( white 0%, purple 100%);
-}
-
-#highscore-btn{
-    background: linear-gradient(white 0%, purple 100%);
-
-}
-
-
-
-.btn[disabled]:hover{
-    cursor: not-allowed;
-    box-shadow: none;
-    transform: none;
-}
-
-.btn:hover{
-    cursor:pointer;
-    box-shadow:yellowgreen;
-    transition: transform 150ms;
-    transform: scale(1.2);
-}
-
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    font-family: georgia, helvetica, times;
-
-}
-
-h1{
-    font-size:xx-large;
-    color:black;
-    margin-bottom: 84px;
-}
 
 .container{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
+    width: 800px;
+    max-width: 80%;
+    background-color: lightblue;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
     justify-content: center;
-    align-items: center;
-    max-width: 80rem;
-    margin: 0;
-    padding: 28px;
+    
 }
 
-.flex-column{
-    display: flex;
-    flex-direction: column;
-}
-
-.flex-center{
-    justify-content: center;
-    align-items: center;
-
-}
-
-.justify-center{
-    justify-content: center;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.hidden{
+.hide {
     display: none;
 }
+
+.btn.correct{
+    --hue: var(--hue-correct);
+    color: black
+}
+
+.btn.wrong {
+    --hue: var(--hue-wrong);
+}
+
+.btn-grid{
+    display: grid;
+    justify-content: center;
+    padding: 5px;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.start-btn, .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.controls {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(var(--hue), 100%, 20%)
+
+}
+
+body.correct{
+    --hue: var(--hue-correct);
+}
+
+body.wrong{
+    --hue: var(--hue-wrong);
+}
+

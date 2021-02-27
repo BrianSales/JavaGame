@@ -4,21 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet">
+
+    <title>Quiz App</title>
 </head>
 <body>
     <div class="container">
-        <div id="home" class="flex-column flex-center">
-            <h1>Let's play a game!</h1>
-            <p>fdgsdfglksdfglskdfkgsfdg</p>
-            
-            <a href="/game.html" id="start-game" type='button' class="btn">Start Game</a>
-            <a href="/highscores.html" id="highscore-btn" type='button' class="btn">High Scores</a>
+        <div id="queation-container" class= "hide">
+            <div id="question">Question</div>
 
-            <div id="timer"></div>
+            <div id="answer-buttons" class="btn-grid">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>                               
+            </div>
+        </div>
+        <div class= "controls">
+            <button id="start-btn" class= "start-btn btn">Start</button>
+            <button id="next-btn" class= "next-btn btn hide">Next</button>
+        </div>
+
     </div>
+
+    <script defer src="java.js"></script>
+    
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="java.js"></script>
 </html>

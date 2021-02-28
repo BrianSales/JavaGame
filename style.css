@@ -1,73 +1,53 @@
-:root{
-    --hue-wright: 200;
-    --hue-wrong: 0;
-    --hue-correct: 145;
-}
-
-
-.container{
-    width: 800px;
-    max-width: 80%;
-    background-color: lightblue;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 0 10px 2px;
-    justify-content: center;
-    
-}
-
-.hide {
-    display: none;
-}
-
-.btn.correct{
-    --hue: var(--hue-correct);
-    color: black
-}
-
-.btn.wrong {
-    --hue: var(--hue-wrong);
-}
-
-.btn-grid{
-    display: grid;
-    justify-content: center;
-    padding: 5px;
-    grid-template-columns: repeat(2, auto);
-    gap: 10px;
-    margin: 20px 0;
-}
-
-.start-btn, .next-btn {
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 10px 20px;
-}
-
-.controls {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
-body{
-    --hue: var(--hue-neutral);
-    padding: 0;
-    margin: 0;
+body,html{
+    font-family: Georgia, Helvetica, sans-serif;
+    text-align: center;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: hsl(var(--hue), 100%, 20%)
+    font-size: 15px;
+}
+
+
+
+.game-box{
+    background: red;
+    width: 1200px;
+    min-height: 500px;
+}
+.answer-item{
+    background: blue;
+    width: 200%;
+    display: inline-block;
+    border-radius:8px;
+    padding: 5px;
+}
+#btn-start{
+    border:none;
+        padding:6px 0 6px 0;
+        border-radius:8px;
+        background:red;
+    font:bold 40px;
+        color:#fff;
+}
+
+.code-title{
+    background-color: red;
+    justify-content: center;
+    flex-wrap: nowrap;
 
 }
 
-body.correct{
-    --hue: var(--hue-correct);
+#info{
+    font-size: 30px;
 }
-
-body.wrong{
-    --hue: var(--hue-wrong);
+.game-box{
+    background:rgba(0, 0, 0, .6);
+    color: white;
 }
-
+.btn-primary{
+    background-color: red!important;
+    border: none!important;
+    padding: 5px 5px;
+    border-radius: 5px; 
+}

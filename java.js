@@ -48,7 +48,8 @@ function gametime(){
 // Setting the intreval function to run every second
 // this intreval decreases the timer every second but
 // when the timer reaches 0 I cleared the intreval to stop
-// the count. I also run the end game function.
+// the count. It also run the end game function when time
+// is up or when you are done the question array set.
     var timeinterval = setInterval(function(){
         if (count <= 0) {
             endgame()
@@ -63,7 +64,7 @@ function gametime(){
 }
 
 
-//function used to record user score and gather input data for hgh score section
+//function used to record user score and gather input data for high score section
 function saveScore(a, b) {
 
     var userData = {

@@ -11,9 +11,9 @@ body,html{
 
 
 .game-box{
-    background: red;
+    
     width: 1200px;
-    min-height: 500px;
+    min-height: 300px;
 }
 .answer-item{
     background: blue;
@@ -27,27 +27,21 @@ body,html{
         padding:6px 0 6px 0;
         border-radius:8px;
         background:red;
-    font:bold 40px;
-        color:#fff;
+        font:bold 40px;
+        color:white;
 }
 
-.code-title{
-    background-color: red;
-    justify-content: center;
-    flex-wrap: nowrap;
-
-}
 
 #info{
     font-size: 30px;
 }
 .game-box{
-    background:rgba(0, 0, 0, .6);
+    background:darkblue;
     color: white;
 }
 .btn-primary{
-    background-color: red!important;
-    border: none!important;
-    padding: 5px 5px;
+    background-color: red;
+    border: none;
+    padding: 5px;
     border-radius: 5px; 
 }

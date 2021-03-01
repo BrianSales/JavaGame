@@ -1,3 +1,5 @@
+// Array index used to make page functional
+
 var storedScores = JSON.parse(localStorage.getItem("userData"));
 var alert =document.getElementById("alert");
 var quizQuestions = document.getElementById("evaluation");
@@ -12,7 +14,7 @@ var btnScore = document.getElementById("btnScore");
 var nextQuestions
 var currentindex = 0;
 var score = 0;
-var count = 60;
+var count = 100;
 var allScores = [];
 
 
@@ -43,10 +45,10 @@ btnScore.addEventListener("click" , function(){
 // Function used to envoke the timer on page
 
 function gametime(){
-// Setting the intreval function that runs every second
-// this intreval decreases our timer every second but
-// when the timer reaches 0 we cleared the intreval to stop
-// the count. We also run the end game function.
+// Setting the intreval function to run every second
+// this intreval decreases the timer every second but
+// when the timer reaches 0 I cleared the intreval to stop
+// the count. I also run the end game function.
     var timeinterval = setInterval(function(){
         if (count <= 0) {
             endgame()
@@ -60,6 +62,8 @@ function gametime(){
 
 }
 
+
+//function used to record user score and gather input data for hgh score section
 function saveScore(a, b) {
 
     var userData = {
@@ -67,6 +71,8 @@ function saveScore(a, b) {
         score: b
     };
     allScores.push(userData)
+
+    //function used to sort high score section from biggest to smallest score
     allScores.sort(function(a,b){
         if(a.score>b.score){
             return -1;
@@ -75,6 +81,8 @@ function saveScore(a, b) {
         }
         
     })
+
+    //method used to store user data on local machine
 
     localStorage.setItem("userData", JSON.stringify(allScores));
     
@@ -117,7 +125,7 @@ function displaynextQuestion(e){
     
      
 }
-//Once the game ends user is prompted to press submit putting
+//Once the game ends user is prompted to press submit putting their intitals into a high score catalog
 //then we display the score page
 //we do this by looping through all of the scores
 //then creating a p tag for all of them
@@ -148,7 +156,7 @@ function correction(response){
     if(response){
         alert.innerText= "FANTASTIC"
         console.log("Good")
-        score+=10
+        score+=20
     }else {
         alert.innerText="WRONG"
         count = count -20
@@ -191,7 +199,7 @@ var questions = [
         answer : "Canada"    
     },
     {
-        title: "What tree you can grow at home and produces more than one kind of fruit at a time?",
+        title: "What tree can you grow at home and produces more than one kind of fruit at a time?",
         choices: ["Fruit Salad Tree","Whompimg Willow","The Giving Tree", "Groot"],
         answer : "Fruit Salad Tree"    
     },
@@ -206,24 +214,24 @@ var questions = [
         answer : "Miami"    
     },
     {
-        title: "What tree you can grow at home and produces more than one kind of fruit at a time?",
-        choices: ["Fruit Salad Tree","Whompimg Willow","The Giving Tree", "Groot"],
-        answer : "Fruit Salad Tree"    
+        title: "In which wing of the White House is the oval office located?",
+        choices: ["East","North","West", "South"],
+        answer : "West"    
     },
     {
-        title: "What tree you can grow at home and produces more than one kind of fruit at a time?",
-        choices: ["Fruit Salad Tree","Whompimg Willow","The Giving Tree", "Groot"],
-        answer : "Fruit Salad Tree"    
+        title: "The average human body contains how many pints of blood?",
+        choices: ["420","9","360", "12"],
+        answer : "9"    
     },
     {
-        title: "What tree you can grow at home and produces more than one kind of fruit at a time?",
-        choices: ["Fruit Salad Tree","Whompimg Willow","The Giving Tree", "Groot"],
-        answer : "Fruit Salad Tree"    
+        title: "Who played Black Panther in the 2016 film of the same name?",
+        choices: ["Chadwick Boseman","Brian Sales","Denzel Washington", "Groot"],
+        answer : "Chadwick Boseman"    
     },
     {
-        title: "What tree you can grow at home and produces more than one kind of fruit at a time?",
-        choices: ["Fruit Salad Tree","Whompimg Willow","The Giving Tree", "Groot"],
-        answer : "Fruit Salad Tree"    
+        title: "The 2021 film Judas and the Black Messiah is a movie about what Chicago Revolutionary?",
+        choices: ["Fred Hampton","Jessie Jackson","Bedford Moss", "Alex Ortega"],
+        answer : "Fred Hampton"    
     },
 ]
 

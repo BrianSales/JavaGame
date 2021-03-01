@@ -1,2 +1,13 @@
 # JavaGame
-A simple game made using JavaScript css and html
+
+## OverView
+
+
+### Languages
+
+JavaScript 
+CSS
+HTML
+
+
+#### Links
